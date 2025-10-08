@@ -5,8 +5,7 @@ import { useNavigate } from "react-router";
 export default function SearchInput({ isHome, setSearchParams }) {
   const nav = useNavigate();
   return (
-    <div>
-
+    <div className="flex justify-center items-center w-full">
       <Formik
         initialValues={{
           search: ''
@@ -22,20 +21,18 @@ export default function SearchInput({ isHome, setSearchParams }) {
         }}
       >
         {({ handleSubmit, handleChange, values }) => (
-          <form onSubmit={handleSubmit} className="flex max-w-[400px] mb-5 gap-5">
+          <form onSubmit={handleSubmit} className="flex max-w-[400px] mb-5 gap-5 w-full">
             <Input
               name="search"
               value={values.search}
               onChange={handleChange}
-
-              placeholder="Search" />
+              placeholder="Search" 
+              className="flex-1"
+            />
             <Button type="submit">Submit</Button>
-
-
           </form>
         )}
       </Formik>
-
     </div>
   )
 }
