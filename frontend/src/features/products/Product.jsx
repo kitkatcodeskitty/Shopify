@@ -113,7 +113,7 @@ export default function Product() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button 
-                className="flex-1 flex h-12 sm:h-14 items-center justify-center bg-violet-900 text-white text-sm sm:text-base font-medium rounded-lg duration-100 hover:bg-blue-800 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="flex-1 flex h-14 sm:h-16 items-center justify-center bg-violet-900 text-white text-base sm:text-lg font-medium rounded-lg duration-100 hover:bg-blue-800 disabled:bg-gray-400 disabled:cursor-not-allowed px-4 py-3"
                 disabled={!user || user?.role === 'Admin' || data.stock === 0}
                 onClick={() => {
                   dispatch(setCart({
@@ -127,12 +127,12 @@ export default function Product() {
                   nav('/cart');
                 }}
               >
-                <BiShoppingBag className="mr-2 text-lg" />
+                <BiShoppingBag className="mr-2 text-xl sm:text-2xl" />
                 Add to cart
               </button>
               
-              <button className="flex-1 flex h-12 sm:h-14 items-center justify-center bg-amber-400 text-gray-800 text-sm sm:text-base font-medium rounded-lg duration-100 hover:bg-yellow-300">
-                <AiOutlineHeart className="mr-2 text-lg" />
+              <button className="flex-1 flex h-14 sm:h-16 items-center justify-center bg-amber-400 text-gray-800 text-base sm:text-lg font-medium rounded-lg duration-100 hover:bg-yellow-300 px-4 py-3">
+                <AiOutlineHeart className="mr-2 text-xl sm:text-2xl" />
                 Wishlist
               </button>
             </div>
